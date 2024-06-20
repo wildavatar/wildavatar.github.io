@@ -66,7 +66,7 @@
   </script>
   
   
-  <link rel="shortcut icon" href="./static/images/faviconV2.png" type="image/png">
+  <link rel="shortcut icon" href="./static/images/faviconV3.png" type="image/png">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -225,7 +225,68 @@
     <!--/ Abstract. -->
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Pipeline. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Pipeline Overview</h2>
+        <div class="content has-text-justified">
+          <img id="teaser" src="./static/images/pipeline.png" alt="teaser.png"/>
+          <p>
+            The four-stage data processing pipeline. We first obtain the bounding box of key subjects in videos in Stage I and
+            extract human segmentation masks in Stage II. Then the SMPL and camera parameters are coarsely estimated in Stage III
+            and later refined in Stage IV.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Pipeline. -->
+</section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Data Analysis. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Data Analysis</h2>
+        <div class="content has-text-justified">
+          <img id="teaser" src="./static/images/data-analysis.png" alt="teaser.png" />
+          <p>
+            (a) word cloud of the video titles in WildAvatar, (b) histograms of annotations across video clips,
+            here we count the bounding box and human mask region in pixels, and "Range" denotes the difference between the maximum
+            and minimum values. (c) comparison of the body pose spaces with popular laboratory human datasets, (d) comparison of the
+            viewpoints spaces with popular laboratory human datasets, (e) resolutions of videos in WildAvatar, and (f) comparison
+            with the previous dataset on the abundance of clothing. We introduce the SSIOU, the inverse IOU between SMPL masks and segmentation masks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Data Analysis. -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Data Analysis. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative comparisons</h2>
+        <div class="content has-text-justified">
+          <img id="teaser" src="./static/images/single-compare.png" alt="teaser.png" />
+          <p>
+            Qualitative comparisons of popular per-subject methods on WildAvatar. NHP and NB, AN, AS, HN, IN, and GH denote Neural
+            Human Rendering, NeuralBody, Animatable NeRF, Animatable SDF, HumanNeRF, InstantNVR, and GauHuman, respectively.
+          </p>
+          <img id="teaser" src="./static/images/generalizable-compare.png" alt="teaser.png" />
+          <p>
+            Qualitative comparisons on the state-of-the-art generalizable avatar creation method (SHERF).
+            ``w/ WA'' or ``w/o WA'' denotes training with or without WildAvatar, respectively.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Data Analysis. -->
+</section>
 
 <!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
