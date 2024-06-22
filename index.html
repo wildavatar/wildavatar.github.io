@@ -64,22 +64,35 @@
 
     gtag('config', 'G-PYVRSFMDRL');
   </script>
-  
-  
   <link rel="shortcut icon" href="./static/images/faviconV3.png" type="image/png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <link rel="stylesheet" href="./static/css/style.css">
+  <link rel="stylesheet" href="./static/css/twentytwenty.css">
+  <link rel="stylesheet" href="./static/css/twentytwenty_aios.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="./static/js/jquery.event.move.js"></script>
+  <script src="./static/js/jquery.twentytwenty.js"></script>
+  <script src="./static/js/jquery.twentytwenty_aios.js"></script>
+  <script>
+    $(function () {
+      $(".twentytwenty-container").twentytwenty();
+      // $(".twentytwenty-container", "#results-carousel").twentytwenty({default_offset_pct: 0.5, ratio: 0.5});
+    });
+  </script>
+  <script>$(function () { $(".twentytwenty_aios-container").twentytwenty_aios() });</script>
 </head>
 <body>
 
@@ -96,7 +109,6 @@
     </div>
   </div>
 </nav>
-
 
 <section class="hero">
   <div class="hero-body">
@@ -190,6 +202,8 @@
   </div>
 </section>
 
+
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -223,6 +237,118 @@
       </div>
     </div>
     <!--/ Abstract. -->
+</section>
+
+<!-- Visualizations -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h3 class="title is-3">SMPL Visualizations</h3>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="columns">
+        <div class="column">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5">
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./static/videos/00.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./static/videos/00-smpl.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="is-divider-vertical" data-content="OR"></div>
+
+        <div class="column">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5">
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./static/videos/01.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./static/videos/01-smpl.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="is-divider-vertical" data-content="OR"></div>
+
+        <div class="column">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5">
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./static/videos/02.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./static/videos/02-smpl.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+
+        <div class="column">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5">
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./static/videos/03.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./static/videos/03-smpl.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="is-divider-vertical" data-content="OR"></div>
+
+        <div class="column">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5">
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./static/videos/04.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./static/videos/04-smpl.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="is-divider-vertical" data-content="OR"></div>
+
+        <div class="column">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5">
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./static/videos/05.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./static/videos/05-smpl.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section">
