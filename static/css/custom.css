@@ -46,6 +46,12 @@
     font-family: "Noto Sans", serif
 }
 
+.notefont {
+    font-size: 1.2em;
+    font-family: 'Noto Sans', sans-serif;
+    font-style: italic
+}
+
 .acmefont {
     font-family: "Acme", serif
 }
