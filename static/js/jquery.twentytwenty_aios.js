@@ -1,25 +1,30 @@
+// Ref: ProPainter modified it to for video
+
 (function ($) {
 
     $.fn.twentytwenty_aios = function (options) {
         var options = $.extend({
             default_offset_pct: 0.5,
             orientation: 'horizontal',
-            before_label: 'Before',
-            after_label: 'After',
+            before_label: 'WHAM',
+            after_label: 'Ours',
             no_overlay: false,
             move_slider_on_hover: false,
             move_with_handle_only: true,
-            click_to_move: false
+            click_to_move: false,
+            ratio: 0.5
         }, options);
 
         return this.each(function () {
-
-            var sliderPct = options.default_offset_pct;
             var container = $(this);
             var sliderOrientation = options.orientation;
             var beforeDirection = (sliderOrientation === 'vertical') ? 'down' : 'left';
             var afterDirection = (sliderOrientation === 'vertical') ? 'up' : 'right';
-
+            // var sliderPct = options.default_offset_pct;
+            var this_Offset_Pct = $(container).attr("default_offset_pct");
+            var sliderPct = this_Offset_Pct ? this_Offset_Pct : options.default_offset_pct;
+            var thisRatio = $(container).attr("ratio");
+            var ratio = thisRatio ? thisRatio : options.ratio;
 
             container.wrap("<div class='twentytwenty_aios-wrapper twentytwenty_aios-" + sliderOrientation + "'></div>");
             if (!options.no_overlay) {
@@ -28,8 +33,8 @@
                 overlay.append("<div class='twentytwenty_aios-before-label' data-content='" + options.before_label + "'></div>");
                 overlay.append("<div class='twentytwenty_aios-after-label' data-content='" + options.after_label + "'></div>");
             }
-            var beforeImg = container.find("img:first");
-            var afterImg = container.find("img:last");
+            var beforeImg = container.find(".video:first");
+            var afterImg = container.find(".video:last");
             container.append("<div class='twentytwenty_aios-handle'></div>");
             var slider = container.find(".twentytwenty_aios-handle");
             slider.append("<span class='twentytwenty_aios-" + beforeDirection + "-arrow'></span>");
@@ -39,8 +44,11 @@
             afterImg.addClass("twentytwenty_aios-after");
 
             var calcOffset = function (dimensionPct) {
-                var w = beforeImg.width();
-                var h = beforeImg.height();
+                // var w = $("video", beforeImg).width();
+                var w = $(container).width();
+                // var h = beforeImg.height();
+                var h = w * ratio;
+
                 return {
                     w: w + "px",
                     h: h + "px",
@@ -128,7 +136,7 @@
                 e.preventDefault();
             });
 
-            container.find("img").on("mousedown", function (event) {
+            container.find("video").on("mousedown", function (event) {
                 event.preventDefault();
             });
 
