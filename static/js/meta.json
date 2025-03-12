@@ -1,8 +1,8 @@
 {
     "@context": "https://schema.org/",
     "@type": "Dataset",
-    "name": "WildAvatar: Web-scale In-the-wild Video Dataset for 3D Avatar Creation",
-    "description": "WildAvatar: Web-scale In-the-wild Video Dataset for 3D Avatar Creation",
+    "name": "WildAvatar: Learning In-the-wild 3D Avatars from the Web",
+    "description": "WildAvatar: Learning In-the-wild 3D Avatars from the Web",
     "alternateName": [
         "WildAvatar Dataset"
     ],
